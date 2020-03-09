@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+<form action="/events" method="POST" autocomplete="off">
+    <div class="form-group">
+        <label>Name: </label>
+        <input type="text" class="form-control" name="eventName" placeholder="Name of Event" value="{{event.eventName}}">
+        <div class="text-danger">
+            {{event.eventNameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Date: </label>
+        <input type="date" class="form-control" name="date" value="{{event.date}}">
+        <div class="text-danger">
+            {{event.dateError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Venue: </label>
+        <input type="text" class="form-control" name="venue" placeholder="Venue" value="{{event.venue}}">
+        <div class="text-danger">
+            {{event.venueError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Comments: </label>
+        <input type="text" class="form-control" name="comments" placeholder="Comments" value="{{event.comments}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</form>
