@@ -16,10 +16,5 @@ var eventSchema=new mongoose.Schema({
     comments:{
         type:String
     }
-});/*
-//Custom Validation
-eventSchema.path('date').validate((val)=>{
-    dateRegex=/^\d{2}([./-])\d{2}\1\d{4}$/;
-    return dateRegex.test(val);
-},"Invalid Date");*/
+});
 mongoose.model('Event',eventSchema);

@@ -5,6 +5,7 @@ const path=require('path');
 const exphbs=require('express-handlebars');
 const bodyparser=require('body-parser');
 
+const loginController=require('./controllers/loginController');
 const eventController=require('./controllers/eventController');
 
 var app=express();
@@ -20,5 +21,5 @@ app.set('view engine','hbs')
 app.listen(3001,()=>{
     console.log("Listening to port 3001");
 });
-
-app.use('/events',eventController)
+app.use('/',loginController);
+app.use('/events',eventController);
