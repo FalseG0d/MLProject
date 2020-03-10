@@ -16,10 +16,10 @@ var eventSchema=new mongoose.Schema({
     comments:{
         type:String
     }
-});
+});/*
 //Custom Validation
 eventSchema.path('date').validate((val)=>{
-    dateRegex=/^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$/;
+    dateRegex=/^\d{2}([./-])\d{2}\1\d{4}$/;
     return dateRegex.test(val);
-},"Invalid Date");
+},"Invalid Date");*/
 mongoose.model('Event',eventSchema);

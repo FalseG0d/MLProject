@@ -40,7 +40,17 @@ function insertRecord(req,res){
 }
 
 router.get('/list',(req,res)=>{
-    res.json('from list')
+    Event.find((err,docs)=>{
+        if(!err){
+            console.log();
+            res.render("event/list",{
+                list:docs
+            });
+        }
+        else{
+            console.log("Error in retrieving List: "+err);
+        }
+    });
 });
 function handleValidationError(err,body){
     for (field in err.errors){
