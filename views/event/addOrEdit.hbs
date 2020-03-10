@@ -1,5 +1,6 @@
 <h3>{{viewTitle}}</h3>
 <form action="/events" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{event._id}}">
     <div class="form-group">
         <label>Name: </label>
         <input type="text" class="form-control" name="eventName" placeholder="Name of Event" value="{{event.eventName}}">
@@ -26,6 +27,7 @@
         <input type="text" class="form-control" name="comments" placeholder="Comments" value="{{event.comments}}">
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>  Submit</button>
+        <a class="btn btn-secondary" href="/events/list"><i class="fa fa-list-alt"></i>  View All</a>
     </div>
 </form>
